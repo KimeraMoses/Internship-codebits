@@ -38,3 +38,22 @@ function solve(meal_cost, tip_percent, tax_percent) {
     // The 's' variable above should be printed first.
     console.log(s + strg)
 
+//Day 3: Intro to Conditional Statements
+    function main() {
+        const N = parseInt(readLine().trim(), 10);
+        if(N%2 !==0){
+            return console.log('Weird')
+        }else{
+            if(N>=2 && N<=5){
+                return console.log('Not Weird')
+            }
+            else if (N>=6 && N<=20){
+                return console.log('Weird')
+            }
+            else if(N>20){
+                return console.log('Not Weird')
+            }
+        }
+    }
+    
+
