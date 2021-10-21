@@ -51,3 +51,17 @@ print(d + num_double)
 # Concatenate and print the String variables on a new line
 # The 's' variable above should be printed first.
 print(s + strg)
+
+#Day 3: Intro to Conditional Statements
+
+N = int(input().strip())
+if N%2 != 0:
+    print('Weird')
+else:
+    if(N>=2 and N<=5):
+        print('Not Weird')
+    elif (N>=6 and N<=20):
+        print('Weird')
+    elif N>=20:
+        print('Not Weird')
+    
