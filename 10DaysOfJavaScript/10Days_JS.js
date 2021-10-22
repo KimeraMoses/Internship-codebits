@@ -183,6 +183,14 @@ function Rectangle(a, b) {
     this.area = this.length * this.width
 }
 
+//Count Objects
+function getCount(objects) {
+    return objects.filter((o)=>o.x===o.y).length
+}
+const myArray = [{x:1,y:1},{x:2,y:3},{x:4,y:5},{x:7,y:7}]
+
+const new_array = myArray.filter((o)=> o.x===o.y)
+console.log(new_array.length)
 
 //******DAY 5 */
 /*

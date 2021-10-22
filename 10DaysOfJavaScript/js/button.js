@@ -4,3 +4,4 @@ function increamentHandler(){
 init_value++
 btn.innerHTML = init_value;
 }
+
