@@ -175,6 +175,14 @@ function getSecondLargest(nums) {
     return Math.max(...new_nums)
 }
 
+//*****DAY 4: Creating a rectangle */
+function Rectangle(a, b) {
+    this.length = a
+    this.width = b
+    this.perimeter = 2*(this.length + this.width)
+    this.area = this.length * this.width
+}
+
 
 //******DAY 5 */
 /*
@@ -196,3 +204,5 @@ class Square extends Rectangle{
 function modifyArray(nums) {
     return (nums || []).map(num => num * (num % 2 === 0 ? 2 : 3));
 }
+
+
