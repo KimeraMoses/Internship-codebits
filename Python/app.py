@@ -67,3 +67,16 @@ n = int(input())
 for i in range(n + 1):
     if i>0:
         print(i, end ="")
+
+
+def print_full_name(first, last):
+    # Write your code here
+    print("Hello "+ first + " " + last + "! You just delved into python.")
+
+
+def count_substring(string, sub_string):
+    count = 0
+    for i in range(len(string)-len(sub_string)+1):
+        if (string[i:i+len(sub_string)] == sub_string):
+            count = count + 1
+    return count
