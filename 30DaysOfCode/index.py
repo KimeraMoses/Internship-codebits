@@ -87,3 +87,8 @@ class Person:
     def yearPasses(self):
         # Increment the age of the person in here
         self.age = self.age + 1 
+#DAY 5: LOOPS
+if __name__ == '__main__':
+    n = int(input().strip())
+    for i in range(1,11):
+        print(f"{n} x {i} = {n*i}")
