@@ -209,8 +209,94 @@ class Square extends Rectangle{
     }
 }
 
+//Template Literals
+/*
+ * Determine the original side lengths and return an array:
+ * - The first element is the length of the shorter side
+ * - The second element is the length of the longer side
+ * 
+ * Parameter(s):
+ * literals: The tagged template literal's array of strings.
+ * expressions: The tagged template literal's array of expression values (i.e., [area, perimeter]).
+ */
+function sides(literals, ...expressions) {
+    const [A, P] = expressions;
+    const value = Math.sqrt((P ** 2 - (16 * A)));
+
+    return [((P - value) / 4), ((P + value) / 4)];
+}
+
 function modifyArray(nums) {
     return (nums || []).map(num => num * (num % 2 === 0 ? 2 : 3));
+}
+//DAY 6: Bitwise Operation
+function getMaxLessThanK(n, k) {
+    let max = 0;
+
+    for (let a = 1; a <= n; a++) {
+        for (let b = a + 1; b <= n; b++) {
+            let a_b = (a & b);
+
+            (a_b < k && a_b > max) && (max = a_b);
+        }
+    }
+ 
+    return max;
+}
+
+//Week Day
+// The days of the week are: "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+function getDayName(dateString) {
+    let dayName;
+    let date = new Date(dateString)
+    // Write your code here
+    dayName = date.toLocaleString('en-us', {weekday: 'long'})
+    return dayName;
+}
+
+//DAY 7 : REGEX
+function regexVar() {
+    /*
+     * Declare a RegExp object variable named 're'
+     * It must match a string that starts with 'Mr.', 'Mrs.', 'Ms.', 'Dr.', or 'Er.', 
+     * followed by one or more letters.
+     */
+    
+    let re = new RegExp(/^(Mr\.|Dr\.|Er\.|Ms\.|Mrs\.)\s?[a-z|A-Z]+$/);
+    /*
+     * Do not remove the return statement
+     */
+    return re;
+}
+
+
+function regexVar() {
+    /*
+     * Declare a RegExp object variable named 're'
+     * It must match ALL occurrences of numbers in a string.
+     */
+    
+    let re = new RegExp(/[0-9]+/gm);
+    /*
+     * Do not remove the return statement
+     */
+    return re;
+}
+
+//DAY 10: CLasses
+/*
+ * Implement a Polygon class with the following properties:
+ * 1. A constructor that takes an array of integer side lengths.
+ * 2. A 'perimeter' method that returns the sum of the Polygon's side lengths.
+ */
+class Polygon{
+    constructor(Array){
+        this.sidesArray = Array
+    }
+    perimeter(){
+        return this.sidesArray.reduce(function sum(a,b){ return a+b})
+      
+    }
 }
 
 
