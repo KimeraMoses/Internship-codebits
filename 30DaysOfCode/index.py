@@ -92,3 +92,10 @@ if __name__ == '__main__':
     n = int(input().strip())
     for i in range(1,11):
         print(f"{n} x {i} = {n*i}")
+
+#DAY 6: Review
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+S_length = int(input())
+for i in range(0, S_length):
+    S=input()
+    print(S[0::2] + ' '+ S[1::2])

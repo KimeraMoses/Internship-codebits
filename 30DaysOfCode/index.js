@@ -87,3 +87,17 @@ function main() {
         console.log(`${n}${' '}x${' '}${i} =`,n*i)
     }
 }
+
+//Day 6: Review
+function processData(input) {
+    //Enter your code here
+   let S = input.split('\n').slice(1);
+    S.forEach((str) => {
+      let even_strg = '';
+      let odd_strg = '';
+        for(let i = 0; i < str.length; i++) {
+            i % 2 ? odd_strg += str[i] : even_strg += str[i];
+        }
+        console.log(`${even_strg} ${odd_strg}`);
+    });
+} 
