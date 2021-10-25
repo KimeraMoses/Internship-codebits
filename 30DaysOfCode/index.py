@@ -99,3 +99,11 @@ S_length = int(input())
 for i in range(0, S_length):
     S=input()
     print(S[0::2] + ' '+ S[1::2])
+
+#DAY 7: ARRAYS
+if __name__ == '__main__':
+    n = int(input().strip())
+
+    arr = list(map(int, input().rstrip().split()))
+    ele = map(str, arr[::-1])
+    print(" ".join(ele))
