@@ -107,3 +107,22 @@ if __name__ == '__main__':
     arr = list(map(int, input().rstrip().split()))
     ele = map(str, arr[::-1])
     print(" ".join(ele))
+
+#DAY 8: DICTIONARIES
+x = int(input())
+
+myDict = {}
+
+for i in range(x):
+    text = input().split()
+    myDict[text[0]] = text[1]
+
+while True:
+    try:
+        inpt = input()
+        if inpt in myDict:
+            print(inpt+"="+myDict[inpt])
+        else:
+            print("Not found")
+    except EOFError:
+        break
