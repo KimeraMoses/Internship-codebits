@@ -126,3 +126,10 @@ while True:
             print("Not found")
     except EOFError:
         break
+#DAY 9:Recursion
+def factorial(n):
+    # Write your code here
+    if n==0:
+        return 1
+    else:
+        return factorial (n-1)*n
