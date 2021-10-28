@@ -172,3 +172,9 @@ for i in range(thickness):
 #*************TEXT WRAP
 def wrap(string, max_width):
     return textwrap.fill(string, max_width)  
+
+#******CAPITALIZE
+def solve(s):
+    for i in s.split():
+        s = s.replace(i,i.capitalize())
+    return s
