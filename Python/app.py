@@ -123,3 +123,7 @@ if __name__ == '__main__':
     res = tuple(integer_list)
     result = hash(res)
     print(result)
+
+#*****SWAP CASES
+def swap_case(s):
+    return s.swapcase()
