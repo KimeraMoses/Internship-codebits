@@ -140,3 +140,16 @@ function factorial(n) {
     else return factorial (n-1)*n
 
 }
+
+//DAY 10: Binary Numbers
+function main() {
+    let n = parseInt(readLine()).toString(2);
+    let num = n.split('0');
+    let numMap = num.map((num)=>{return num.length})
+    let res = numMap.reduce((a,b)=>{
+        if (a>b) return a
+        else return b
+    })
+    console.log(res)
+
+}
