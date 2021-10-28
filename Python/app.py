@@ -178,3 +178,44 @@ def solve(s):
     for i in s.split():
         s = s.replace(i,i.capitalize())
     return s
+#*******The Minion Game
+def minion_game(string):
+    # your code goes here
+    player1_score = 0
+    player2_score = 0
+    str_len = len(string)
+    for i in range(str_len):
+        if s[i] in "AEIOU":
+            player1_score += (str_len)-i
+        else :
+            player2_score += (str_len)-i
+    
+    if player1_score > player2_score:
+        print("Kevin", player1_score)
+    elif player1_score < player2_score:
+        print("Stuart",player2_score)
+    elif player1_score == player2_score:
+        print("Draw")
+    else :
+        print("Draw")
+
+#*******Designer Door Mat
+num, M = map(int, input().split())
+for i in range(1, num, 2):
+    print(str('.|.' * i).center(M, '-'))
+print('WELCOME'.center(M, '-'))
+for i in range(num-2, -1, -2):
+    print(str('.|.' * i).center(M, '-'))
+
+#*******STRING FORMATTING
+def print_formatted(number):
+    # your code goes here
+    num = len(bin(number)[2:])
+   
+    for i in range(1,number+1):
+        print(str(i).rjust(num,' '),end=" ")
+        print(oct(i)[2:].rjust(num,' '),end=" ")
+        print(((hex(i)[2:]).upper()).rjust(num,' '),end=" ")
+        print(bin(i)[2:].rjust(num,' '),end=" ")
+        print("")
+    
