@@ -95,3 +95,24 @@ if __name__ == '__main__':
         marks=marks+i
     avg=marks/3
     print("%.2f"%avg)
+
+#*****LISTS
+if __name__ == '__main__':
+    N = int(input())
+    MyList=[];
+    for i in range(0,N):
+        Entered_cmd=input().split();
+        if Entered_cmd[0] == "insert":
+            MyList.insert(int(Entered_cmd[1]),int(Entered_cmd[2]))
+        elif Entered_cmd[0] == "append":
+            MyList.append(int(Entered_cmd[1]))
+        elif Entered_cmd[0] == "pop":
+            MyList.pop();
+        elif Entered_cmd[0] == "print":
+            print(MyList)
+        elif Entered_cmd[0] == "remove":
+            MyList.remove(int(Entered_cmd[1]))
+        elif Entered_cmd[0] == "sort":
+            MyList.sort();
+        else:
+            MyList.reverse();
