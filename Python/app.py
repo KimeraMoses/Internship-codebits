@@ -73,13 +73,14 @@ def print_full_name(first, last):
     # Write your code here
     print("Hello "+ first + " " + last + "! You just delved into python.")
 
-
+#****FIND A STRING
 def count_substring(string, sub_string):
     count = 0
     for i in range(len(string)-len(sub_string)+1):
         if (string[i:i+len(sub_string)] == sub_string):
             count = count + 1
     return count
+
 
 #*****Percentage
 if __name__ == '__main__':
@@ -127,3 +128,17 @@ if __name__ == '__main__':
 #*****SWAP CASES
 def swap_case(s):
     return s.swapcase()
+
+#****String Split and Join
+def split_and_join(line):
+    # write your code here
+    return '-'.join(line.split(" "))
+
+#****STRING VALIDATOR
+if __name__ == '__main__':
+    s = input()
+    print(any(char.isalnum() for char in s) )
+    print(any(char.isalpha() for char in s) )
+    print(any(char.isdigit() for char in s) )
+    print(any(char.islower() for char in s) )
+    print(any(char.isupper() for char in s) )
