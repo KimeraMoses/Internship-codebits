@@ -218,4 +218,31 @@ def print_formatted(number):
         print(((hex(i)[2:]).upper()).rjust(num,' '),end=" ")
         print(bin(i)[2:].rjust(num,' '),end=" ")
         print("")
-    
+#**********Alphabet Rangoli
+def print_rangoli(size):
+    # your code goes here
+    width  = size*4-3
+    strg = ''
+    for i in range(1,size+1):
+        for j in range(0,i):
+            strg += chr(96+size-j)
+            if len(strg) < width :
+                strg += '-'
+        for k in range(i-1,0,-1):    
+            strg += chr(97+size-k)
+            if len(strg) < width :
+                strg += '-'
+        print(strg.center(width,'-'))
+        strg = ''
+
+    for i in range(size-1,0,-1):
+        strg = ''
+        for j in range(0,i):
+            strg += chr(96+size-j)
+            if len(strg) < width :
+                strg += '-'
+        for k in range(i-1,0,-1):
+            strg += chr(97+size-k)
+            if len(strg) < width :
+                strg += '-'
+        print(strg.center(width,'-'))
